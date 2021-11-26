@@ -20,7 +20,7 @@ nav{
     font-family: "Comic Sans MS";
     font-size: 12px;
     background-color: var(--green-color);
-    position: fi;
+    position: fixed;
 }
 .bar, #menu{
     display: none;
@@ -53,10 +53,44 @@ a.btn{
     border-radius: 15px;
 }
 
+/* search */
+
+#search-bar>.cari{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin: 2rem auto;
+}
+.cari input[type=text]{
+    width: 90%;
+    padding: 10px;
+    outline: none;
+    background: transparent;
+    border: none;
+    text-align: center;
+    color: wheat;
+   
+}
+.cari button{
+    background: transparent;
+    border: none;
+    width: 10%;
+    padding: 10px;
+    cursor: pointer;
+}
+button i{
+    font-size: 20px;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+}
 main>.section-one{
     width: 100%;
     height: 80vh;
-    /* background-image: url('../img/joseph-gonzalez-fdlZBWIP0aM-unsplash (1).jpg'); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -64,15 +98,18 @@ main>.section-one{
 
 .section-one>.contain{
     position: relative;
-    top: 50%;
+    top: 30%;
     padding: 0 20%;
     bottom: 2;
     text-align: center;
     font-size: 20px;
+ 
 }
 .contain h1{
     font-weight: 900;
     margin-bottom: 20px;
+    font-size: 40px;
+    color: var(--white-color);
 }
 .contain span{
     background-color :var(--green-color);
@@ -104,9 +141,9 @@ p>.btn:hover{
     margin: auto;
     background: var(--green-color);
     border-radius: 10px;
-    width: 50%;
+    width: 70%;
     line-height: 2;
-    height: 100%;
+    height: fit-content;
     padding: 20px;
     color: var(--white-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -125,7 +162,9 @@ p>.btn:hover{
     display: flex;
     justify-content: space-between;
     padding-bottom: 30px;
+    
 }
+
 .flex ul{
     font-size: 12px;
     list-style: none;
@@ -145,9 +184,9 @@ ul .kcol{
 .grid-four{
     margin-top: 100px;
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(4,1fr);
     grid-column-gap: 40px;
-    grid-row-gap: 40px;
+    grid-row-gap: 100px;
     
 }
 .grid-four>.items{
@@ -181,6 +220,13 @@ ul .kcol{
    cursor: pointer;
 }
 
+footer{
+    padding: 40px;
+    text-align: center;
+    color: var(--white-color);
+    background: var(--seagreen-color);
+}
+
 @media(max-width:768px){
     .bar{
         display: block;
@@ -193,8 +239,11 @@ ul .kcol{
         background-color: var(--green-color);
         text-align: center;
     }
+    .section-one h1{
+        margin-bottom: 50px;
+    }
     .section-one>.contain{
-        top: 25%;
+        top: 50%;
         padding: 0 10%;
         color: var(--white-color);
     }
@@ -227,8 +276,65 @@ ul .kcol{
         grid-template-columns: repeat(2,1fr);
         grid-column-gap: 40px;
         grid-row-gap: 40px;
-        
-    }
+    }       
+}
 
-           
+
+
+/* recipe */
+/* .section-two-re{
+    padding: 15%;
+    margin-top: 30%;
+    width: 80%;
+    background-color: cadetblue;
+    margin: auto;
+    height: 100vh;
+}
+.section-two-re>.ingredient{
+    width: 100%;
+    margin: auto;
+    background-color: chocolate;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    
+} */
+.pop h4{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.ingred{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    text-align: left;
+    grid-column-gap: 50px;
+    font-size: 14px;
+
+}
+.ingre>h4{
+    text-align: center;
+}
+.ingre-1 img{
+    width: 100%;
+    background-size: cover;
+    height: 35vh;
+}
+.ingre-2{
+    width: 100%;
+    height: 40vh; 
+}
+.resep{
+    padding: 20px;
+}
+.resep h2{
+    text-align: center;
+    font-size: 20px;
+}
+.resep p{
+    font-size: 13px;
+}
+.petunjuk iframe{
+    width: 100%;
+    height: 50vh;
 }
