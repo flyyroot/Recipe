@@ -9,7 +9,6 @@ function tampilMenu(){
 }
 
 // let searc_btn = document.getElementById('btn-search');
-
 // searc_btn.addEventListener('click',search)
 function tampilCari(){
     document.getElementById('search-bar').innerHTML=`
@@ -60,16 +59,10 @@ async function CategoryFood(){
         <p class="name">${datas.categories[food].strCategory}</p><br>
         <p class="desc">${word50}....</p><br>
         <div class="ct"><a class="opt" href="#">Select</a></div>
-        </div>
-       
-        `
-
+        </div>`
     })
-    popf.innerHTML = contain_food;
-    
-    
-}  
-CategoryFood()
+    popf.innerHTML = contain_food;  }  
+
 CategoryFood()
 .then(resp=>{
     console.log(resp)
@@ -106,7 +99,6 @@ function bahanBahan(bahan){
     <div class="ingred g-2">
         <div class ="ingre-1">
             <img src="${bahan.strMealThumb}" class="img-food">
-           
         </div>
         <div class="ingre2">
         <ul>
@@ -120,7 +112,6 @@ function bahanBahan(bahan){
            `<li>${bahane}</li>`).join(' ')}
        </ul>
        </div>
-
     </div>
     <div class="resep">
     <h2>Petunjuk </h2>
@@ -128,7 +119,6 @@ function bahanBahan(bahan){
     ${bahan.strInstructions}
     </p>
     </div>
-
     <div class="resep">
     <h2>VIDEO </h2>
     <p class="petunjuk">
